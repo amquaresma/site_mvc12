@@ -18,7 +18,7 @@ require_once 'View/layouts/header.php';
                     <div class="product-info">
                         <h3><?php echo htmlspecialchars($produto['nome_produto']); ?></h3>
                         <p class="product-category"><?php echo htmlspecialchars($produto['nome_categoria'] ?? 'Sem categoria'); ?></p>
-                        <p class="product-description"><?php echo htmlspecialchars(substr($produto['descricao'], 0, 100)); ?><?php echo strlen($produto['descricao']) > 100 ? '...' : ''; ?></p>
+                        <p class="product-description"><?php $desc = $produto['descricao'] ?? ''; echo htmlspecialchars(substr($desc, 0, 100)); ?><?php echo strlen($desc) > 100 ? '...' : ''; ?></p>
                         <div class="product-footer">
                             <span class="product-price">R$ <?php echo number_format($produto['preco'], 2, ',', '.'); ?></span>
                             <span class="product-stock <?php echo $produto['estoque'] > 0 ? 'in-stock' : 'out-of-stock'; ?>">

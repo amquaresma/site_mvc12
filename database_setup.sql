@@ -4,6 +4,9 @@
 -- Sistema E-commerce com MVC
 -- ========================================
 
+-- Criar o schema se não existir
+CREATE DATABASE IF NOT EXISTS site_mvc;
+
 -- Usar o schema site_mvc
 USE site_mvc;
 
